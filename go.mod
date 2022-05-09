@@ -1,4 +1,4 @@
-module telegram/api
+module github.com/salynskayat/telegram
 
 go 1.17
 
