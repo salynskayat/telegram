@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option go_package="telegram/api";
+
+package api;
+
+message TgMessage {
+  int32 Id = 1;
+  int64 ChatId = 2;
+  string Text = 3;
+  int64 Ts = 4;
+}
+
+
+message TgResponse {
+  int32 Id = 1;
+  int64 ChatId = 2;
+  string Text = 3;
+  int64 Ts = 4;
+}
+
+service Quiz {
+  rpc Interact(TgMessage) returns(TgResponse) {}
+}
